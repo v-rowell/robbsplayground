@@ -1,14 +1,14 @@
 const data = [
     [
-       { name: 'John', age: 25 },
-       { name: 'Jane', age: 30 }
+        { name: 'John', age: 25 },
+        { name: 'Jane', age: 30 }
     ],
     [
-       { name: 'Bob', age: 40 }
+        { name: 'Bob', age: 40 }
     ]
 ];
 
-// Extract names from the nested array
-const names = data.map(innerArray => innerArray.map(person => person.name)).flat();
+// Extract names from the data array
+const names = data.flatMap(innerArray => innerArray.map(person => person.name));
 
 console.log(names); // Output: ['John', 'Jane', 'Bob']
